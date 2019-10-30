@@ -3,3 +3,9 @@ service: serverless-reminders
 provider:
   name: aws
   runtime: nodejs10.x
+    iamRoleStatements:
+    -  Effect: "Allow"
+       Action:
+         - "ses:*"
+       Resource:
+         - "*"
